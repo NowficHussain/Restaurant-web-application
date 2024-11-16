@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel-hayati</title>
+    <link rel="stylesheet" href="./Assat/Own/Css/style.css">
+    <link rel="stylesheet" href="./Assat/Bootsrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <script defer src="./Assat/Own/Js/script.js"></script>
+    <script src="./Assat/Bootsrap/js/bootstrap.min.js"></script>
+    <script src="./Assat/Bootsrap/js/jquary.min.js"></script>
+
+</head>
+<style>
+    p {
+        letter-spacing: 1.1px;
+        line-height: 27px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <section class="container-fluid active">
+        <header class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-3" href="#"><img src="Assat/Own/Images/Bg-Img/حياتي__1_-removebg-preview.png" alt="" height="50px" width="50px">Hotel-hayati</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+                    aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="navbar-collapse collapse" id="navbars">
+                    <ul class="navbar-nav ms-auto mb-2 me-5 pe-3 mb-sm-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#homePage">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#aboutPage">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#menuPage">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactPage">Contact</a></li>
+                    </ul>
+                    <form role="search">
+                        <input class="form-control me-2" type="search" list="searchList" placeholder="Search">
+                        <datalist id="searchList">
+                            <option value="Mandhi">
+                            <option value="Tiffen">
+                            <option value="Specials">
+                            <option value="Vareity Rice">
+                        </datalist>
+                    </form>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <div class="offcanvas offcanvas-end offcanvas-dark text-bg-dark" data-bs-scroll="true" data-bs-backdrop="false"
+        tabindex="-1" id="canvasOrder">
+        <div class="offcanvas-header">
+            <h3 class="text-warning fw-bold text-center">Your Order</h3>
+            <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body position-relative">
+            <div class="order-list">
+                <div id="orderPlace"></div>
+            </div>
+        </div>
+        <div class="offcanvas-footer p-3 d-flex justify-content-between align-items-center text-bg-light"
+            id="orderPlace1">
+            <h4 class="left">Total</h4>
+            <h4 class="left" id="totalOrderPrice">0.0</h4>
+        </div>
+    </div>
+    <section class="container-fluid page-1" id="homePage">
+        <div class="position-relative p-5">
+            <div class="row mt-5">
+                <div class="col-6 ms-5 mt-5">
+                    <h1 class="display-6 text-warning text-center writing">Welcome</h1>
+                    <h1 class="display-lg-6 text-light text-center mt-4" style="font-family: sans-serif;">
+                        Hotel-Hayati<br />Multicuisine A/c
+                    </h1>
+                </div>
+            </div>
+            <div class="row mt-5 gap-3">
+                <div class="col-6 offset-1 col-md-2">
+                    <a href="#aboutPage" class="btn btn-outline-light w-100" role="button">About Us</a>
+                </div>
+                <div class="col-6 offset-1 col-md-2">
+                    <a href="#" class="btn btn-warning w-100" role="button">Book a Table</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid page-2 position-relative py-5" id="aboutPage">
+        <p class="display-3 fw-bold text-center text-danger position-relative pb-5">ABOUT</p>
+        <div class="row">
+            <div class="col-12 col-md-6 box-left">
+                <img src="Assat/Own/Images/Bg-Img/frpage.jpg"
+                    class="img-fluid" alt="">
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-center align-self-center box-right">
+                
+                <p class="lead"> <h4>Hotel-Hayati is a Family-friendly and Party-Oriented Hotel with Variety of Cuisines,Buffets,Sides,Drinks and
+                    desserts <span class="badge bg-dark fs-5">Since 2000</span></h4></p>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid page-4 py-5 px-4" id="menuPage">
+        <p class="display-3 fw-bold text-center text-danger position-relative">MENU</p>
+        <div class="row g-4" id="Mandhi">
+            <h1 class="bg-dark-subtle rounded-3 text-dark w-100 p-2 ps-5">Arabian-Mandhi</h1>
+            <div class="col-12 col-md-6">
+                <div class="row box-left">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/c-Mandhi.jpeg"
+                            style="height: 100%;" class="img-fluid" alt="img">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="chickeBurgerTitle">Chicken Mandhi</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="chickeBurgerPrice">250</span> /- ph</p>
+                        <button type="button" class="btn btn-warning"
+                            onclick="liveAlertBtn('chickeBurgerTitle', 'chickeBurgerPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-right">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/mutton-m.webp"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="spicyBurgerTitle">Mutton mandhi</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-half"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="spicyBurgerPrice">350</span> /-ph</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('spicyBurgerTitle', 'spicyBurgerPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-left">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/f-mandhi.webp"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="eggBurgerTitle">Fish mandhi</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="eggBurgerPrice">400</span>/-ph</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('eggBurgerTitle', 'eggBurgerPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-right">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/pexels-aboodi-18698264.jpg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="cheeseBurgerTitle">Mixed premium</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="cheeseBurgerPrice">500</span>/-ph</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('cheeseBurgerTitle', 'cheeseBurgerPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-2" id="Tiffen">
+            <h1 class="bg-dark-subtle rounded-3 text-dark w-100 p-2 ps-5">Tiffin</h1>
+            <div class="col-12 col-md-6">
+                <div class="row box-left">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/parotta.webp"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="chickenPizzaTitle">Parotta</h1>
+                        <p class="lead fs-6">With two sherva's that orgins from madurai style</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="chickenPizzaPrice">40</span>/-(set)</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('chickenPizzaTitle', 'chickenPizzaPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-right">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/chapathi.jpeg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="eggPizzaTitle">Chappathi</h1>
+                        <p class="lead fs-6">With chicken kurma and  aloo kurma</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="eggPizzaPrice">30</span>/-(set)</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('eggPizzaTitle', 'eggPizzaPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-left">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/dosa.jpeg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="prawnPizzaTitle">Dosa</h1>
+                        <p class="lead fs-6">With sambar,coconut chutney,Andhra kadappa,ghee podi</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="prawnPizzaPrice">60</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('prawnPizzaTitle', 'prawnPizzaPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-right">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/Bedmi_Poori.jpg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="cheesePizzaTitle">Poori</h1>
+                        <p class="lead fs-6">With aloo butter and veg kurma with dhall and chopped onions</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="cheesePizzaPrice">100</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('cheesePizzaTitle', 'cheesePizzaPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-2" id="Specials">
+            <h1 class="bg-dark-subtle rounded-3 text-dark w-100 p-2 ps-5">Hayati-specials</h1>
+            <div class="col-12 col-md-6">
+                <div class="row box-left">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/grill.webp"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="chickenBiriyaniTitle">Grilled chicken</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="chickenBiriyaniPrice">170</span>/-(half)</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('chickenBiriyaniTitle', 'chickenBiriyaniPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-right">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/tandoori.jpeg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="eggBiriyaniTitle">Tandoori chicken</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                        </p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="eggBiriyanPrice">150</span>/-(half)</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('eggBiriyaniTitle', 'eggBiriyanPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-left">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/f-fish.jpg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="fishBiriyaniTitle">Tandoori fish</h1>
+                        <p class="lead fs-6">(Special feast)</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="fishBiriyanPrice">200</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('fishBiriyaniTitle', 'fishBiriyanPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-right">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/t-prawn.jpeg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="muttonBiriyaniTitle">Prawn tandoori</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="muttonBiriyanPrice">250</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('muttonBiriyaniTitle', 'muttonBiriyanPrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-2" id="varietyRice">
+            <h1 class="bg-dark-subtle rounded-3 text-dark w-100 p-2 ps-5">VARIETY RICE</h1>
+            <div class="col-12 col-md-6">
+                <div class="row box-left">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/c-fried.jpg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="chickenRiceTitle">Chicken fried rice</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="chickenRicePrice">110</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('chickenRiceTitle', 'chickenRicePrice')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-right">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/e-fried.png"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="eggRiceTitle">Egg fried rice</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                        </p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="eggRicePrice">80</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('eggRiceTitle', 'eggRicePrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-left">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/F-RICE.webp"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="fishRiceTitle">Fish Rice</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
+                        </p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="fishRicePrice">130</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('fishRiceTitle', 'fishRicePrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row box-right">
+                    <div class="col-12 col-md-6">
+                        <img src="Assat/Own/Images/Bg-Img/P-FRIED.jpg"
+                            style="height: 100%;" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="fw-bold" id="prawnRiceTitle">Prawn Rice</h1>
+                        <p class="lead fs-6">Greate way to make your order to delicious food to cart</p>
+                        <p class="lead"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></p>
+                        <p class="text-danger fw-bold fs-4">₹ <span id="prawnRicePrice">150</span>/-</p>
+                        <button type="button" class="btn btn-warning" id=""
+                            onclick="liveAlertBtn('prawnRiceTitle', 'prawnRicePrice')">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid page-6 px-4 pb-5 pt-3" id="contactPage">
+        <h1 class="display-4 text-center text-danger pt-4 fw-bold">Contact Us</h1>
+        <h1 class="mt-4 mb-5 h5 text-center text-dark">HOW TO GET IN TOUCH</h1>
+        <div class="row" style="height: 80%;">
+            <div class="col-12 col-md-6 position-relative">
+                <div class="row p-2 h-100">
+                    <p class="lead fs-5 d-flex flex-column align-self-start">Are you a food lover? If your answer is
+                        yes, then in restaurant for you. We serve foods for reasonable prices. It's awesone, we know.
+                    </p>
+                    <p
+                        class="display-4 text-center d-flex flex-column align-self-center justify-content-center text-danger my-5">
+                        HOTEL <br /><span class="lead h1">hayati</span></p>
+                    <div class="row">
+                        <p class="col-12 col-sm-6">hayatihotelenq@gmail.com</p>
+                        <p class="col-12 col-sm-4 offset-md-2"><i class="fa-solid fa-phone-volume"></i> +91 9345462694
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <iframe class="map p-5"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31103.08645921541!2d80.19917225001005!3d12.979154909155483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d9ff2065a3b%3A0x66435015604038cc!2sVelachery%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1723331548914!5m2!1sen!2sin"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="position-fixed bottom-0 end-0 d-flex flex-column gap-3">
+            <div class="nav-item" type="button" data-bs-target="#canvasOrder" data-bs-toggle="offcanvas">
+                <a onclick="order()"><img src="https://img.icons8.com/?size=100&id=8chNl15hy6jY&format=png&color=000000"
+                        class="icon-chat rounded-pill p-2 bg-warning-subtle border border-2 border-dark" alt=""></a>
+            </div>
+            <div class="text-center" role="button" data-bs-target="#contactForm" data-bs-toggle="modal">
+                <img src="https://img.icons8.com/?size=100&id=13724&format=png&color=000000"
+                    class="icon-chat rounded-pill p-2 bg-warning-subtle border border-2 border-dark" alt="">
+            </div>
+        </div>
+        <div class="modal" id="contactForm" tabindex="-1">
+            <div class="modal-dialog modal-diglog-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title">Contact Us</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="./Index.html#contact" class="needs-validation" novalidate autocomplete="off">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" id="firstName" class="form-control form-control-sm" required>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Date of Birth</div>
+                                </div>
+                                <div class="col">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" class="form-control form-control-sm" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="age" class="form-label">Age</label>
+                                    <input type="number" id="age" class="form-control form-control-sm">
+                                </div>
+                                <div class="col">
+                                    <label for="phone" class="form-label">Gender</label>
+                                    <select class="form-select" required>
+                                        <option selected>Choose Gender</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <label for="phone" class="form-label">Phone No.</label>
+                            <input type="number" id="phone" class="form-control form-control-sm">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control form-control-sm">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" rows="3" class="form-control form-control-sm"></textarea>
+                            <div class="row mt-3">
+                                <div class="col-6 d-grid">
+                                    <input type="reset" class="btn btn-danger" value="Reset">
+                                </div>
+                                <div class="col-6 d-grid">
+                                    <input type="submit" class="btn btn-primary" value="Submit"
+                                        onclick="contactSubmit()">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h1 class="display-6 text-warning text-center">Hotel-hayati</h1>
+                    <p class="h6 text-light text-center">You never forget once you enter in this restaurant</p>
+                </div>
+                <div class="col-12 col-md-8 mt-3">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <p class="text-warning h4">Service</p>
+                            <ul>
+                                <li><a href="#" class="text-dark">Restaurant</a></li>
+                                <li><a href="#" class="text-dark">Hotal</a></li>
+                                <li><a href="#" class="text-dark">Bar</a></li>
+                                <li><a href="#" class="text-dark">Couples Dinner</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <p class="text-warning h4">Menu</p>
+                            <ul>
+                                <li><a href="#Mandhi" class="text-dark">Arabian-mandhi</a></li>
+                                <li><a href="#Tiffen" class="text-dark">Tiffin</a></li>
+                                <li><a href="#Specials" class="text-dark">Hayati-specials</a></li>
+                                <li><a href="#varietyRice" class="text-dark">Variety Rice</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <p class="text-warning h4">Booking</p>
+                            <ul>
+                                <li><a href="#" class="text-dark">Table Booking</a></li>
+                                <li><a href="#" class="text-dark">Rooms Booking</a></li>
+                                <li><a href="#" class="text-dark">Party Booking</a></li>
+                                <li><a href="#" class="text-dark">Dinner Booking</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-top border-2 border-light pb-3">
+                <div class="col-12 col-md-6 text-center">
+                    <p class="lead text-light">Copyrights &copy; all copy are revelts</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column flex-sm-row justify-content-center justify-content-md-end "
+                    style="margin-left: auto;">
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a href="#"><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0 0 48 48">
+                                    <path fill="#3f51b5" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
+                                    <path fill="#fff"
+                                        d="M29.368,24H26v12h-5V24h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H30v4h-2.287 C26.104,16,26,16.6,26,17.723V20h4L29.368,24z">
+                                    </path>
+                                </svg></a></li>
+                        <li class="ms-3"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30"
+                                    height="30" viewBox="0 0 48 48">
+                                    <path fill="#fff"
+                                        d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z">
+                                    </path>
+                                    <path fill="#fff"
+                                        d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z">
+                                    </path>
+                                    <path fill="#cfd8dc"
+                                        d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z">
+                                    </path>
+                                    <path fill="#40c351"
+                                        d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z">
+                                    </path>
+                                    <path fill="#fff" fill-rule="evenodd"
+                                        d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                                        clip-rule="evenodd"></path>
+                                </svg></a></li>
+                        <li class="ms-3"><a href="#"><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0 0 48 48">
+                                    <path fill="#0288D1"
+                                        d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+                                    </path>
+                                </svg></a></li>
+                       
+                        <li class="ms-3"><a href="#"><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0 0 48 48">
+                                    <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035"
+                                        r="44.899" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#fd5"></stop>
+                                        <stop offset=".328" stop-color="#ff543f"></stop>
+                                        <stop offset=".348" stop-color="#fc5245"></stop>
+                                        <stop offset=".504" stop-color="#e64771"></stop>
+                                        <stop offset=".643" stop-color="#d53e91"></stop>
+                                        <stop offset=".761" stop-color="#cc39a4"></stop>
+                                        <stop offset=".841" stop-color="#c837ab"></stop>
+                                    </radialGradient>
+                                    <path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+                                        d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z">
+                                    </path>
+                                    <radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54"
+                                        r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#4168c9"></stop>
+                                        <stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop>
+                                    </radialGradient>
+                                    <path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+                                        d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z">
+                                    </path>
+                                    <path fill="#fff"
+                                        d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z">
+                                    </path>
+                                    <circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle>
+                                    <path fill="#fff"
+                                        d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z">
+                                    </path>
+                                </svg></a></li>
+                        <li class="ms-3"><a href="mailto:nowfichussain@gmail.com"><img
+                                    src="https://img.icons8.com/?size=100&id=LPcVDft9Isqt&format=png&color=000000"
+                                    width="27" alt=""></a></li>
+                        <li class="ms-3"><a href="#"><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="textLight" width="30"
+                                    height="30" viewBox="0 0 64 64">
+                                    <path
+                                        d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z">
+                                    </path>
+                                </svg></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="position-fixed bottom-0 end-0">
+        <div id="liveAlertPlaceholder"></div>
+    </div>
+</body>
+
+</html>
